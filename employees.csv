@@ -1,0 +1,2 @@
+ci,name,age,position,survey_filled,token,question1,question2,question3,question4,question5
+1,e,1,e,0,,"['Question: What is your current position?', None]","['Question: Are you happy with your current position?', 'Answer  : b']","['Question: Do you like apply for other position?', 'Answer  : a']","['Question: Do you like your working hours?', 'Answer  : c']","['Question: Do you like to switch your working hours?', None]"

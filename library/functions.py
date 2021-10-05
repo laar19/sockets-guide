@@ -8,10 +8,6 @@ import threading
 
 import pandas as pd
 
-from multiprocessing import Process
-from threading       import Thread
-from queue           import Queue
-
 # Colums of the .csv file ("database")
 columns = {
     "ci"           : int, # ID (cédula de identidad)
@@ -81,9 +77,6 @@ def survey(user_timeout):
     for key in key_list:
         questions_list2[key] = questions_list[key]
 
-    #survey_filled = Queue()
-    #survey_filled.put(False)
-
     # Countdown thread
     th_countdown = thread_with_trace(target=countdown, args=(user_timeout,))
     # Displays survey thread
@@ -112,10 +105,6 @@ def display_survey(questions_list2, th_countdown_flag):
     th_countdown_flag.kill()
     th_countdown_flag.join()
 
-    #show_results(questions_list2)
-
-    return questions_list2
-
 # Send data to the server
 def send_data(ClientSocket, input_, data_):
     # Prepare data
@@ -129,7 +118,6 @@ def send_data(ClientSocket, input_, data_):
 def countdown(timeout):
     while timeout > 0:
         timeout -= 1
-        #print(timeout)
         time.sleep(1)
     os.system("cls" if os.name == "nt" else "clear")
     print("ERROR. Timeout!!")

@@ -1,6 +1,6 @@
 {
-    "opening_date"   : [2021, 01, 01],
-    "date_timeout"   : [2021, 12, 31],
+    "opening_date"   : "[2021, 01, 01]",
+    "date_timeout"   : "[2021, 12, 31]",
     "opening_time"   : "01:00",
     "timeout"        : "23:00",
     "user_timeout"   : 10,

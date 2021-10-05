@@ -26,18 +26,10 @@ if __name__ == "__main__":
     while True:
         # Main menu
         Input = input("1) Register.\n2) Take the survey.\n")
-        #Input = get_input("1) Register.\n2) Take the survey.\n", int)
 
         # Register
         if Input == str(1):
             # Get data
-            """
-            ci       = input("Ci      : ") # ID (cédula de identidad)
-            name     = input("Name    : ") # Full name
-            age      = input("Age     : ") # Age
-            position = input("Position: ") # Position
-            """
-
             ci       = get_input("Ci      : ", int) # ID (cédula de identidad)
             name     = get_input("Name    : ", str) # # Full name
             age      = get_input("Age     : ", int) # Age
@@ -57,7 +49,6 @@ if __name__ == "__main__":
             # Get data
             os.system("cls" if os.name == "nt" else "clear")
             print("You have {} minutes to complete the survey\nonce your CI is checked!!\n".format(user_timeout/60))
-            #ci = input("Ci: ") # ID (cédula de identidad)
             ci = get_input("Ci: ", int) # ID (cédula de identidad)
 
             # Prepare data and send it

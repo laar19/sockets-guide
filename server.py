@@ -6,7 +6,6 @@ import sys
 from _thread  import *
 from datetime import date
 
-from library.functions import *
 from library.employee  import Employee
 
 # Load config file
@@ -46,7 +45,7 @@ def threaded_client(connection):
 
             # If the employee is not registered then we store it
             if employee.store():
-                reply = "Registration succefull!!\n"
+                reply = "Registration succesfull!!\n"
             else:
                 reply = "ERROR. Employee already registered\n"
                 

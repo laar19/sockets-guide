@@ -17,6 +17,7 @@ display_timeout = int(config_file["display_timeout"]) # Display results
 opening_date    = config_file["opening_date"].split() # Opening date
 date_timeout    = config_file["date_timeout"].split() # Date tomeout
 
+# Check deadline and timeout
 date_timeout = date(int(date_timeout[0]), int(date_timeout[1]), int(date_timeout[2]))
 if date.today() > date_timeout:
     sys.exit("Date timeout")

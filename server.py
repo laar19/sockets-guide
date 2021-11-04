@@ -14,14 +14,12 @@ with open("config.json", "r") as config_file:
 config_file     = json.loads(config_file)
 user_timeout    = int(config_file["user_timeout"])    # User timeout fill survey
 display_timeout = int(config_file["display_timeout"]) # Display results
-opening_date    = config_file["opening_date"]         # Opening date
-date_timeout    = config_file["date_timeout"]         # Date tomeout
+opening_date    = config_file["opening_date"].split() # Opening date
+date_timeout    = config_file["date_timeout"].split() # Date tomeout
 
-"""
-date_timeout = date(date_timeout[0], date_timeout[1], date_timeout[2])
+date_timeout = date(int(date_timeout[0]), int(date_timeout[1]), int(date_timeout[2]))
 if date.today() > date_timeout:
-    sys.exit("")
-"""
+    sys.exit("Date timeout")
 
 ServerSocket = socket.socket()
 host         = "127.0.0.1"

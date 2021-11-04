@@ -19,7 +19,7 @@ if __name__ == "__main__":
         Response = ClientSocket.recv(1024)
     except OSError:
         os.system("cls" if os.name == "nt" else "clear")
-        sys.exit("ERROR. The survey is not available at this time")
+        sys.exit("ERROR. Survey not available at this time")
     user_timeout    = pickle.loads(Response)["user_timeout"]
     display_timeout = pickle.loads(Response)["display_timeout"]
 
